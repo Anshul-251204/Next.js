@@ -1,9 +1,17 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import { Button } from "../ui/button";
 import { ModeToggle } from "../mode-toggle";
+import { signIn, signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
+import { Avatar } from "../ui/avatar";
+import { AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 
 export default function Nav() {
+	const { data, status } = useSession();
+	console.log(status, data);
+
 	return (
 		<div className=" w-full px-10 py-4 flex justify-between items-center ">
 			<div className="flex items-baseline">
@@ -16,12 +24,26 @@ export default function Nav() {
 			</div>
 
 			<div className="flex gap-4 items-center">
-				<Button size={"sm"}>Sign Up</Button>
-				<Button 
-                size={"sm"} 
-                variant={"outline"}>
-					Login
-				</Button>
+				{status == "unauthenticated" && (
+					<Button onClick={() => signIn()} size={"sm"}>
+						Sign Up
+					</Button>
+				)}
+				{status !== "unauthenticated" && (
+					<Button
+						onClick={() => signOut()}
+						size={"sm"}
+						variant={"outline"}
+					>
+						Logout
+					</Button>
+				)}
+				{data?.user?.image ? (
+					<Avatar>
+						<AvatarImage src={String(data?.user?.image)} />
+						<AvatarFallback>CN</AvatarFallback>
+					</Avatar>
+				) : null}
 				<ModeToggle />
 			</div>
 		</div>
