@@ -10,8 +10,7 @@ import { AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 
 export default function Nav() {
 	const { data, status } = useSession();
-	console.log(status, data);
-
+	
 	return (
 		<div className=" w-full px-10 py-4 flex justify-between items-center ">
 			<div className="flex items-baseline">
