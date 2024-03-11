@@ -32,7 +32,7 @@ export default function page() {
 		});
 	};
 	return (
-		<div className="w-full h-screen flex justify-center items-center">
+		<div className="w-full px-4 h-screen flex justify-center items-center">
 			<div className="sm:w-[30%] sm:h-[70%] w-full h-full  border-foreground rounded-lg p-4">
 				<form
 					onSubmit={signInHandler}
@@ -79,8 +79,7 @@ export default function page() {
 					<Github /> &nbsp; &nbsp; Login with Github
 				</Button>
 				<br />
-				<br />
-				<p className="text-center  ">OR</p>
+				
 			</div>
 		</div>
 	);

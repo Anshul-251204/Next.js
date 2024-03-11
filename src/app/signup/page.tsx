@@ -46,7 +46,7 @@ export default function page() {
 	};
 
 	return (
-		<div className="w-full h-screen flex justify-center py-16 sm:py-4 items-center">
+		<div className="w-full h-screen flex justify-center py-16 sm:py-4 items-center px-4">
 			<div className="sm:w-[30%] sm:h-[70%] w-full h-full  border-foreground rounded-lg p-4">
 				<form
 					onSubmit={(e: React.FormEvent<HTMLFormElement>) =>
@@ -93,7 +93,7 @@ export default function page() {
 
 					<br />
 					<div>
-						<Link href={"/login"}>
+						<Link href={"/signin"}>
 							Already have a account{" "}
 							<span className=" underline ">Click Here</span>
 						</Link>

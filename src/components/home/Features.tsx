@@ -5,18 +5,18 @@ export default function Features() {
 		<section id="feature" className=" w-full min-h-screen bg-background text-foreground flex justify-center items-center ">
 			<div className="w-full sm:h-[70vh] sm:w-[70%] flex flex-col justify-between ">
 				<div>
-					<h1 className="text-5xl font-semibold text-center my-4">
+					<h1 className="text-5xl max-sm:text-xl font-semibold text-center my-4">
 						Features
 					</h1>
-					<p className=" w-[65%] text-lg text-center mx-auto my-6 text-gray-400 ">
+					<p className=" max-sm:text-sm w-[65%] text-lg text-center mx-auto my-6 text-gray-400 ">
 						By this project i'm learning how to build an modern app,
 						with features like auth, API routes, and static pages
 						would work in Next.js 14 src dir & many more.
 					</p>
 				</div>
 
-				<div className="w-full sm:h-[73%] sm:w-[100%] grid sm:grid-cols-3 gap-4">
-					<div className="h-[100%] p-4 border rounded-lg flex flex-col justify-evenly ">
+				<div className="w-full sm:h-[73%] px-8 sm:w-[100%] grid sm:grid-cols-3 gap-4">
+					<div className="h-[100%] p-4  border rounded-lg flex flex-col justify-evenly max-sm:gap-4 ">
 						<svg
 							viewBox="0 0 24 24"
 							className="h-12 w-12 fill-current"
