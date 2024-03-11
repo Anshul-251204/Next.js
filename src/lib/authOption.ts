@@ -22,11 +22,14 @@ const otpion: NextAuthOptions = {
 
 			credentials: {
 				username: {
-					label: "Username",
-					type: "text",
-					placeholder: "jsmith",
+					label: "Email",
+					type: "email",
+					placeholder: "email",
 				},
-				password: { label: "Password", type: "password" },
+				password: { 
+					label: "Password", 
+					type: "password",
+					placeholder:"Password" },
 			},
 			async authorize(credentials) {
 
