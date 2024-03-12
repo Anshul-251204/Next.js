@@ -2,7 +2,7 @@
 import Todo from "@/components/todo/Todo";
 import { Button } from "@/components/ui/button";
 import { TodoType } from "@/types/type";
-import { Cog, CogIcon, Home, ListTodo, Plus, StickyNote, UserRound } from "lucide-react";
+import { CogIcon, Home, ListTodo, Plus, StickyNote } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
