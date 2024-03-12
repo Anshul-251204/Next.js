@@ -2,31 +2,39 @@
 import Todo from "@/components/todo/Todo";
 import { Button } from "@/components/ui/button";
 import { TodoType } from "@/types/type";
-import { Cog, CogIcon, Home, ListTodo, Plus, StickyNote, UserRound } from "lucide-react";
+import {
+	Cog,
+	CogIcon,
+	Home,
+	ListTodo,
+	Plus,
+	StickyNote,
+	UserRound,
+} from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 export default function page() {
 	const [todos, setTodos] = useState<TodoType[]>([]);
-	
+
 	const [refresh, setRefresh] = useState<boolean>();
 	const router = useRouter();
 
-	useEffect(() => {
-		const fetchTodo = async () => {
-			const res = await fetch("/api/todo", {
-				method: "GET",
-				headers: { "Content-Type": "application/json" },
-			});
+	//useEffect(() => {
+	// 	const fetchTodo = async () => {
+	// 		const res = await fetch("/api/todo", {
+	// 			method: "GET",
+	// 			headers: { "Content-Type": "application/json" },
+	// 		});
 
-			const data = await res.json();
+	// 		const data = await res.json();
 
-			setTodos(data.todos);
-		};
+	// 		setTodos(data.todos);
+	// 	};
 
-		fetchTodo();
-	}, [refresh]);
+	// 	fetchTodo();
+	// }, [refresh]);
 
 	const redirectToAddPage = () => {
 		router.replace("/add-todo");
@@ -70,27 +78,15 @@ export default function page() {
 			<div className="w-full sm:w-[80%] h-screen overflow-y-auto p-4">
 				<div className="h-[100px] w-full border-b flex justify-between items-center p-4 ">
 					<div className="">
-						<h1 className="text-xl font-bold ">Todos</h1>
-						<p className="text-sm">Manage your daily work</p>
+						<h1 className="text-xl font-bold ">Setting</h1>
+						<p className="text-sm">Manage your detials</p>
 					</div>
 
-					<Button onClick={redirectToAddPage}>
-						<Plus /> &nbsp;{" "}
-						<span className="max-sm:hidden">New</span>
-					</Button>
+					
 				</div>
 
 				<div className=" mt-8 w-full border rounded-lg ">
-					{todos.map((todo, idx) => (
-						<Todo
-							setRefresh={setRefresh}
-							key={idx}
-							id={todo.id}
-							title={todo.title}
-							description={todo.description}
-							isDone={todo.isDone}
-						/>
-					))}
+					{/* content */}
 				</div>
 			</div>
 		</div>
