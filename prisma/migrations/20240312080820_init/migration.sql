@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Todo" ALTER COLUMN "isDone" DROP NOT NULL,
+ALTER COLUMN "isDone" SET DEFAULT false;

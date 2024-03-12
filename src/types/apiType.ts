@@ -3,3 +3,8 @@ export type RegisterRequestBody = {
     name:string,
     password:string
 }
+
+export type RequiestBodyOfTodo = {
+	title: string;
+	description: string;
+};

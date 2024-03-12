@@ -14,3 +14,11 @@ export type OAuthAndCredentialsType = (OAuthConfig<GithubProfile> | CredentialsC
         placeholder: string;
     };
 }>)[]
+
+
+export type  TodoType = {
+    title:string,
+    description:string,
+    isDone:boolean,
+    id : number ;
+}

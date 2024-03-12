@@ -11,14 +11,14 @@ import { signIn, signOut, useSession } from "next-auth/react";
 
 import React from "react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 export default function DropDownMenu() {
-
 	const { status } = useSession();
 
-  const loginOrLogoutHandler = async()=>{
-    status !== "unauthenticated" ? signOut() : signIn()
-  }
+	const loginOrLogoutHandler = async () => {
+		status !== "unauthenticated" ? signOut() : signIn();
+	};
 
 	return (
 		<DropdownMenu>
@@ -26,9 +26,17 @@ export default function DropDownMenu() {
 				<Menu />
 			</DropdownMenuTrigger>
 			<DropdownMenuContent>
-				<DropdownMenuItem>Todo</DropdownMenuItem>
+				<DropdownMenuItem>
+					<Link href={"/profile"}>Todo</Link>
+				</DropdownMenuItem>
 				<DropdownMenuSeparator />
-				<DropdownMenuItem>Blog</DropdownMenuItem>
+				<DropdownMenuItem>
+					<Link href={"/blog"}>Blog</Link>
+				</DropdownMenuItem>
+				<DropdownMenuSeparator />
+				<DropdownMenuItem>
+					<Link href={"/setting"}>Setting</Link>
+				</DropdownMenuItem>
 				<DropdownMenuSeparator />
 				<DropdownMenuItem onClick={loginOrLogoutHandler}>
 					{status !== "unauthenticated" ? "Logout" : "Login"}
