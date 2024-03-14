@@ -9,9 +9,7 @@ export default function Features() {
 						Features
 					</h1>
 					<p className=" max-sm:text-sm w-[65%] text-lg text-center mx-auto my-6 text-gray-400 ">
-						By this project i'm learning how to build an modern app,
-						with features like auth, API routes, and static pages
-						would work in Next.js 14 src dir & many more.
+						{"By this project i'm learning how to build an modern app,with features like auth, API routes, and static pages would work in Next.js 14 src dir & many more."}
 					</p>
 				</div>
 

@@ -25,13 +25,13 @@ export async function POST(request: Request) {
 		const checkpassword = bcrypt.compareSync(password, user?.password!);
 
 		if (checkpassword) {
-			return NextResponse.json(user);
+			 return NextResponse.json({message:"Password or email are wrong !"},{status:400});
 		}
+		return NextResponse.json(user);
 
-		return null;
 	} catch (error) {
 		console.log(error);
 
-		return null;
+		return NextResponse.json({message:"Something went wrong !"}, {status:500});
 	}
 }

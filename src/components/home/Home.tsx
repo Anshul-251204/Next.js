@@ -22,8 +22,7 @@ function Home() {
 						An app built using Next.js 14 server components.
 					</h1>
 					<p className=" max-sm:text-sm text-xl font-bold my-4 w-[60%] max-sm:w-[100%] text-center mx-auto text-gray-400">
-						I'm building a web app with Next.js 14 and open sourcing
-						everything. inspired form Taxonomy.
+						{"I'm building a web app with Next.js 14 and open sourcing everything. inspired form Taxonomy."}
 					</p>
 
 					<div className="flex gap-4 justify-center">

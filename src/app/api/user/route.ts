@@ -9,6 +9,7 @@ export async function POST(request: Request) {
 		const { name, email, password }: RegisterRequestBody = body;
 
 		if (!name || !email || !password) {
+
 			return NextResponse.json(
 				{
 					message: "All fields are required",
@@ -22,6 +23,7 @@ export async function POST(request: Request) {
 		});
 
 		if (user) {
+			
 			return NextResponse.json(
 				{
 					message: "User All ready exists",
