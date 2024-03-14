@@ -7,7 +7,7 @@ import { Plus } from "lucide-react";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
-export default function () {
+export default function Page () {
 	const router = useRouter();
 	const [todo, setTodo] = useState({
 		title: "",
