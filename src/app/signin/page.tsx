@@ -27,7 +27,7 @@ export default function Page() {
 	};
 
 	const signInWithGithub = async () => {
-		const res = await signIn("github", {
+		await signIn("github", {
 			callbackUrl: "http://localhost:3000/",
 		});
 	};

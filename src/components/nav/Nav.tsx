@@ -7,7 +7,6 @@ import { signIn, signOut } from "next-auth/react";
 import { useSession } from "next-auth/react";
 import { Avatar } from "../ui/avatar";
 import { AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
-import { Menu } from "lucide-react";
 import DropDownMenu from "./DropDownMenu";
 
 export default function Nav() {
@@ -22,8 +21,8 @@ export default function Nav() {
 
 				<div className=" flex gap-4 max-sm:hidden">
 					<a href="#feature">Feature</a>
-					<Link href={"/blog"}>Blog</Link>
-					<Link href={"/todo"}>Todo</Link>
+					<Link href={"/"}>Blog</Link>
+					<Link href={"/profile"}>Todo</Link>
 				</div>
 			</div>
 

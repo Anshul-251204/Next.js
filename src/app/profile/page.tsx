@@ -9,7 +9,7 @@ import React from "react";
 
 export default function Page() {
 	const [todos, setTodos] = React.useState<TodoType[]>([]);
-	
+
 	const [refresh, setRefresh] = React.useState<boolean>();
 	const router = useRouter();
 
@@ -53,7 +53,7 @@ export default function Page() {
 				</Link>
 				<Link
 					className="flex items-center gap-2 p-2 w-[150px] hover:bg-secondary rounded-md px-4"
-					href={"/blog"}
+					href={"/"}
 				>
 					<StickyNote />
 					Blog
