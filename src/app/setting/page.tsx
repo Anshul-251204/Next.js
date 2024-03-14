@@ -13,12 +13,12 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 export default function page() {
-	const [todos, setTodos] = useState<TodoType[]>([]);
+	const [todos, setTodos] = React.useState<TodoType[]>([]);
 
-	const [refresh, setRefresh] = useState<boolean>();
+	const [refresh, setRefresh] = React.useState<boolean>();
 	const router = useRouter();
 
 	//useEffect(() => {
